@@ -11,7 +11,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SimpleWorker worker;
+    private Worker worker;
     private TextView tvMessage;
 
     private Handler handler= new Handler( Looper.getMainLooper()){
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        worker = new SimpleWorker();
+        worker = new Worker();
         tvMessage = (TextView)findViewById(R.id.tv_message);
 
         worker.execute(() -> {
